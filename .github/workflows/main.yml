@@ -32,7 +32,7 @@ jobs:
       - name: lint
         run: npm run eslint
 
-      - uses: enriikke/gatsby-gh-pages-action@v2
+      - uses: enriikke/gatsby-gh-pages-action@v4
         if: ${{ github.event_name == 'push' && env.SKIP_COMMITS }}
         with:
           access-token: ${{ secrets.TEMPLATE_API }}
